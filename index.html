@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élégance Digitale | Créateurs d'Expériences Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#8b5cf6',
+                        gold: '#f59e0b',
+                        cream: '#fef3c7'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <meta name="description" content="Élégance Digitale | Créateurs d'Expériences Web">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="font-sans bg-primary text-white overflow-x-hidden">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="font-display text-2xl font-bold bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+                    Élégance
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-300 hover:text-white transition-colors duration-300">Services</a>
+                    <a href="#projets" class="text-gray-300 hover:text-white transition-colors duration-300">Projets</a>
+                    <a href="#apropos" class="text-gray-300 hover:text-white transition-colors duration-300">À Propos</a>
+                    <a href="#temoignages" class="text-gray-300 hover:text-white transition-colors duration-300">Témoignages</a>
+                    <a href="#contact" class="px-6 py-2 bg-gradient-to-r from-accent to-purple-600 rounded-full hover:shadow-lg hover:shadow-accent/50 transition-all duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
+                <a href="#services" class="block text-gray-300 hover:text-white">Services</a>
+                <a href="#projets" class="block text-gray-300 hover:text-white">Projets</a>
+                <a href="#apropos" class="block text-gray-300 hover:text-white">À Propos</a>
+                <a href="#temoignages" class="block text-gray-300 hover:text-white">Témoignages</a>
+                <a href="#contact" class="inline-block px-6 py-2 bg-gradient-to-r from-accent to-purple-600 rounded-full">Contact</a>
+            </div>
+        </div>
+        <script>
+            document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+        </script>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-2 h-2 bg-white rounded-full animate-ping"></div>
+            <div class="absolute top-40 right-20 w-1 h-1 bg-accent rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
+            <div class="absolute bottom-32 left-1/3 w-2 h-2 bg-gold rounded-full animate-ping" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/3 right-1/4 w-1 h-1 bg-white rounded-full animate-ping" style="animation-delay: 1.5s;"></div>
+        </div>
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+            <div class="hero-content opacity-0 translate-y-10">
+                <span class="inline-block px-4 py-2 mb-6 text-sm font-medium bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                    <i class="fa fa-sparkles text-gold mr-2"></i>
+                    Bienvenue dans le futur du web design
+                </span>
+                <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+                    Créons Ensemble<br>
+                    <span class="bg-gradient-to-r from-accent via-purple-400 to-gold bg-clip-text text-transparent">
+                        L'Extraordinaire
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    Nous transformons vos visions en expériences digitales immersives qui captivent, 
+                    engagent et convertissent votre audience.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="group px-8 py-4 bg-gradient-to-r from-accent to-purple-600 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-accent/40 transition-all duration-500 transform hover:scale-105">
+                        Démarrer un Projet
+                        <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#projets" class="px-8 py-4 border-2 border-white/30 rounded-full text-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                        <i class="fa fa-play mr-2"></i>
+                        Voir nos réalisations
+                    </a>
+                </div>
+            </div>
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center stats-container">
+                <div class="stat-item opacity-0">
+                    <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">250+</div>
+                    <div class="text-gray-400 mt-2">Projets Livrés</div>
+                </div>
+                <div class="stat-item opacity-0" style="animation-delay: 0.2s;">
+                    <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">98%</div>
+                    <div class="text-gray-400 mt-2">Clients Satisfaits</div>
+                </div>
+                <div class="stat-item opacity-0" style="animation-delay: 0.4s;">
+                    <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">15+</div>
+                    <div class="text-gray-400 mt-2">Années d'Expertise</div>
+                </div>
+                <div class="stat-item opacity-0" style="animation-delay: 0.6s;">
+                    <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">24/7</div>
+                    <div class="text-gray-400 mt-2">Support Client</div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#services" class="text-white/50 hover:text-white transition-colors">
+                <i class="fa fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+        <script>
+            setTimeout(() => {
+                document.querySelector('.hero-content').style.opacity = '1';
+                document.querySelector('.hero-content').style.transform = 'translateY(0)';
+                document.querySelector('.hero-content').style.transition = 'all 1s ease-out';
+            }, 200);
+            document.querySelectorAll('.stat-item').forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                    item.style.transition = 'all 0.6s ease-out';
+                }, 800 + (index * 200));
+            });
+        </script>
+    </section>
+
+    <section id="services" class="py-24 bg-secondary relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-purple-500 to-gold"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-semibold tracking-wider uppercase">Nos Services</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                    Des Solutions Sur Mesure
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Nous offrons une gamme complète de services pour propulser votre présence digitale vers de nouveaux sommets.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group p-8 bg-primary/50 rounded-3xl border border-white/10 hover:border-accent/50 transition-all duration-500 hover:transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa fa-paintbrush text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Design UI/UX</h3>
+                    <p class="text-gray-400 mb-6">
+                        Des interfaces utilisateur élégantes et intuitives qui enchantent vos visiteurs et optimisent leur parcours.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fa fa-check text-accent mr-2"></i>Wireframing &amp; Prototypage</li>
+                        <li><i class="fa fa-check text-accent mr-2"></i>Design System</li>
+                        <li><i class="fa fa-check text-accent mr-2"></i>Tests Utilisateurs</li>
+                    </ul>
+                </div>
+                <div class="group p-8 bg-primary/50 rounded-3xl border border-white/10 hover:border-gold/50 transition-all duration-500 hover:transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gold to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa fa-code text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Développement Web</h3>
+                    <p class="text-gray-400 mb-6">
+                        Code propre et performant pour des sites web rapides, sécurisés et évolutifs.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fa fa-check text-gold mr-2"></i>Sites Vitrines</li>
+                        <li><i class="fa fa-check text-gold mr-2"></i>Applications Web</li>
+                        <li><i class="fa fa-check text-gold mr-2"></i>E-commerce</li>
+                    </ul>
+                </div>
+                <div class="group p-8 bg-primary/50 rounded-3xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa fa-mobile-screen text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Applications Mobiles</h3>
+                    <p class="text-gray-400 mb-6">
+                        Des applications mobiles natives et cross-platform qui captivent votre audience.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fa fa-check text-purple-400 mr-2"></i>iOS &amp; Android</li>
+                        <li><i class="fa fa-check text-purple-400 mr-2"></i>React Native</li>
+                        <li><i class="fa fa-check text-purple-400 mr-2"></i>PWA</li>
+                    </ul>
+                </div>
+                <div class="group p-8 bg-primary/50 rounded-3xl border border-white/10 hover:border-green-500/50 transition-all duration-500 hover:transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa fa-chart-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">SEO &amp; Marketing</h3>
+                    <p class="text-gray-400 mb-6">
+                        Stratégies de référencement et marketing digital pour maximiser votre visibilité.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fa fa-check text-green-400 mr-2"></i>Audit SEO</li>
+                        <li><i class="fa fa-check text-green-400 mr-2"></i>Content Marketing</li>
+                        <li><i class="fa fa-check text-green-400 mr-2"></i>Social Media</li>
+                    </ul>
+                </div>
+                <div class="group p-8 bg-primary/50 rounded-3xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa fa-server text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Hébergement Cloud</h3>
+                    <p class="text-gray-400 mb-6">
+                        Infrastructure cloud performante et sécurisée pour vos applications.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fa fa-check text-blue-400 mr-2"></i>AWS &amp; GCP</li>
+                        <li><i class="fa fa-check text-blue-400 mr-2"></i>DevOps</li>
+                        <li><i class="fa fa-check text-blue-400 mr-2"></i>Monitoring 24/7</li>
+                    </ul>
+                </div>
+                <div class="group p-8 bg-primary/50 rounded-3xl border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa fa-headset text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Support &amp; Maintenance</h3>
+                    <p class="text-gray-400 mb-6">
+                        Accompagnement continu pour garantir la pérennité de vos solutions digitales.
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fa fa-check text-red-400 mr-2"></i>Support Technique</li>
+                        <li><i class="fa fa-check text-red-400 mr-2"></i>Mises à Jour</li>
+                        <li><i class="fa fa-check text-red-400 mr-2"></i>Formation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="py-24 bg-primary relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold font-semibold tracking-wider uppercase">Portfolio</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                    Nos Réalisations
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Découvrez une sélection de nos projets les plus remarquables qui illustrent notre expertise et notre créativité.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-accent text-white transition-all duration-300" data-filter="all">Tous</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-all duration-300" data-filter="web">Web Design</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-all duration-300" data-filter="app">Applications</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-all duration-300" data-filter="branding">Branding</button>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <div class="project-item group relative overflow-hidden rounded-3xl" data-category="web">
+                    <img src="https://placehold.co/600x400/1e293b/8b5cf6?text=Luxe+E-commerce" alt="Projet Luxe E-commerce" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-accent text-sm font-semibold">E-commerce</span>
+                            <h3 class="text-2xl font-bold mt-2">Luxe Fashion Store</h3>
+                            <p class="text-gray-300 mt-2">Boutique en ligne haut de gamme avec expérience immersive</p>
+                            <a href="#" class="inline-flex items-center mt-4 text-accent hover:text-white transition-colors">
+                                Voir le projet <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item group relative overflow-hidden rounded-3xl" data-category="app">
+                    <img src="https://placehold.co/600x400/1e293b/f59e0b?text=Fitness+App" alt="Projet Fitness App" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-gold text-sm font-semibold">Application Mobile</span>
+                            <h3 class="text-2xl font-bold mt-2">FitLife Pro</h3>
+                            <p class="text-gray-300 mt-2">Application de fitness avec coaching personnalisé</p>
+                            <a href="#" class="inline-flex items-center mt-4 text-gold hover:text-white transition-colors">
+                                Voir le projet <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item group relative overflow-hidden rounded-3xl" data-category="branding">
+                    <img src="https://placehold.co/600x400/1e293b/a855f7?text=Tech+Startup" alt="Projet Tech Startup" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-purple-400 text-sm font-semibold">Branding</span>
+                            <h3 class="text-2xl font-bold mt-2">NovaTech Identity</h3>
+                            <p class="text-gray-300 mt-2">Identité visuelle complète pour startup tech</p>
+                            <a href="#" class="inline-flex items-center mt-4 text-purple-400 hover:text-white transition-colors">
+                                Voir le projet <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item group relative overflow-hidden rounded-3xl" data-category="web">
+                    <img src="https://placehold.co/600x400/1e293b/22c55e?text=Restaurant" alt="Projet Restaurant" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-green-400 text-sm font-semibold">Site Web</span>
+                            <h3 class="text-2xl font-bold mt-2">Gastronomie Étoilée</h3>
+                            <p class="text-gray-300 mt-2">Site vitrine élégant pour restaurant gastronomique</p>
+                            <a href="#" class="inline-flex items-center mt-4 text-green-400 hover:text-white transition-colors">
+                                Voir le projet <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item group relative overflow-hidden rounded-3xl" data-category="app">
+                    <img src="https://placehold.co/600x400/1e293b/3b82f6?text=Banking+App" alt="Projet Banking App" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-blue-400 text-sm font-semibold">Application Fintech</span>
+                            <h3 class="text-2xl font-bold mt-2">SecureBank Mobile</h3>
+                            <p class="text-gray-300 mt-2">Application bancaire moderne et sécurisée</p>
+                            <a href="#" class="inline-flex items-center mt-4 text-blue-400 hover:text-white transition-colors">
+                                Voir le projet <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item group relative overflow-hidden rounded-3xl" data-category="branding">
+                    <img src="https://placehold.co/600x400/1e293b/ec4899?text=Beauty+Brand" alt="Projet Beauty Brand" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="text-pink-400 text-sm font-semibold">Branding</span>
+                            <h3 class="text-2xl font-bold mt-2">Bloom Cosmetics</h3>
+                            <p class="text-gray-300 mt-2">Rebranding complet pour marque de beauté</p>
+                            <a href="#" class="inline-flex items-center mt-4 text-pink-400 hover:text-white transition-colors">
+                                Voir le projet <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-8 py-4 border-2 border-accent text-accent rounded-full hover:bg-accent hover:text-white transition-all duration-300">
+                    Voir tous les projets
+                    <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-accent', 'text-white');
+                        b.classList.add('bg-white/10', 'text-gray-300');
+                    });
+                    this.classList.add('active', 'bg-accent', 'text-white');
+                    this.classList.remove('bg-white/10', 'text-gray-300');
+                    const filter = this.dataset.filter;
+                    document.querySelectorAll('.project-item').forEach(item => {
+                        if (filter === 'all' || item.dataset.category === filter) {
+                            item.style.display = 'block';
+                            item.style.opacity = '1';
+                        } else {
+                            item.style.display = 'none';
+                            item.style.opacity = '0';
+                        }
+                    });
+                });
+            });
+        </script>
+    </section>
+
+    <section id="apropos" class="py-24 bg-gradient-to-br from-secondary via-primary to-secondary relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-accent font-semibold tracking-wider uppercase">À Propos</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                        Passionnés par l'Excellence Digitale
+                    </h2>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        Depuis 2010, notre équipe de créatifs et de développeurs passionnés transforme les idées 
+                        les plus ambitieuses en réalités digitales exceptionnelles. Nous croyons que chaque projet 
+                        mérite une attention particulière et une approche sur mesure.
+                    </p>
+                    <p class="text-gray-400 mb-8">
+                        Notre philosophie est simple : combiner créativité audacieuse, technologie de pointe et 
+                        stratégie intelligente pour créer des expériences qui marquent les esprits et génèrent 
+                        des résultats concrets.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                            <i class="fa fa-lightbulb text-accent text-2xl mb-3"></i>
+                            <h4 class="font-bold mb-1">Innovation</h4>
+                            <p class="text-gray-400 text-sm">Toujours à la pointe des tendances</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                            <i class="fa fa-handshake text-gold text-2xl mb-3"></i>
+                            <h4 class="font-bold mb-1">Collaboration</h4>
+                            <p class="text-gray-400 text-sm">Partenaires de votre succès</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                            <i class="fa fa-gem text-purple-400 text-2xl mb-3"></i>
+                            <h4 class="font-bold mb-1">Qualité</h4>
+                            <p class="text-gray-400 text-sm">Excellence dans chaque détail</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                            <i class="fa fa-rocket text-pink-400 text-2xl mb-3"></i>
+                            <h4 class="font-bold mb-1">Performance</h4>
+                            <p class="text-gray-400 text-sm">Résultats mesurables</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center text-accent hover:text-white transition-colors font-semibold">
+                        Découvrir notre équipe
+                        <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img src="https://placehold.co/600x700/1e293b/8b5cf6?text=Notre+Équipe" alt="Notre équipe" class="rounded-3xl shadow-2xl">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-gradient-to-br from-accent to-purple-600 rounded-3xl -z-10"></div>
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-gold to-orange-500 rounded-3xl -z-10"></div>
+                    <div class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                        <div class="text-4xl font-bold text-accent">15+</div>
+                        <div class="text-gray-300">Années d'expérience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-primary">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-semibold tracking-wider uppercase">Notre Équipe</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                    Les Talents Derrière la Magie
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-3xl mb-6">
+                        <img src="https://placehold.co/400x500/1e293b/8b5cf6?text=Sophie" alt="Sophie Martin" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-4">
+                                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Sophie Martin</h3>
+                    <p class="text-accent">Directrice Créative</p>
+                </div>
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-3xl mb-6">
+                        <img src="https://placehold.co/400x500/1e293b/f59e0b?text=Thomas" alt="Thomas Dubois" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-4">
+                                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-gold transition-colors">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-gold transition-colors">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Thomas Dubois</h3>
+                    <p class="text-gold">Lead Developer</p>
+                </div>
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-3xl mb-6">
+                        <img src="https://placehold.co/400x500/1e293b/a855f7?text=Emma" alt="Emma Laurent" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-4">
+                                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Emma Laurent</h3>
+                    <p class="text-purple-400">UX Designer</p>
+                </div>
+                <div class="group text-center">
+                    <div class="relative overflow-hidden rounded-3xl mb-6">
+                        <img src="https://placehold.co/400x500/1e293b/22c55e?text=Lucas" alt="Lucas Bernard" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-4">
+                                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Lucas Bernard</h3>
+                    <p class="text-green-400">Project Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="temoignages" class="py-24 bg-secondary relative overflow-hidden">
+        <div class="absolute top-1/2 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl transform -translate-y-1/2"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold font-semibold tracking-wider uppercase">Témoignages</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                    Ce Que Disent Nos Clients
+                </h2>
+            </div>
+            <div class="relative">
+                <div id="testimonials-slider" class="overflow-hidden">
+                    <div class="flex transition-transform duration-500" id="testimonials-track">
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-primary/50 rounded-3xl p-8 border border-white/10 h-full">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://placehold.co/60x60/8b5cf6/ffffff?text=JD" alt="Jean Dupont" class="w-14 h-14 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-bold">Jean Dupont</h4>
+                                        <p class="text-gray-400 text-sm">CEO, TechVision</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                </div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    "Une équipe exceptionnelle qui a su comprendre notre vision et la transformer en une 
+                                    expérience digitale remarquable. Le résultat a dépassé toutes nos attentes."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-primary/50 rounded-3xl p-8 border border-white/10 h-full">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://placehold.co/60x60/f59e0b/ffffff?text=ML" alt="Marie Leclerc" class="w-14 h-14 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-bold">Marie Leclerc</h4>
+                                        <p class="text-gray-400 text-sm">Fondatrice, Bloom Beauty</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                </div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    "Professionnalisme, créativité et réactivité. Leur travail sur notre identité de marque 
+                                    et notre site e-commerce a véritablement transformé notre business."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-primary/50 rounded-3xl p-8 border border-white/10 h-full">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://placehold.co/60x60/a855f7/ffffff?text=PR" alt="Pierre Roux" class="w-14 h-14 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-bold">Pierre Roux</h4>
+                                        <p class="text-gray-400 text-sm">Directeur Marketing, InnovateCorp</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                </div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    "Collaboration fluide et résultats impressionnants. Notre application mobile a reçu 
+                                    des retours exceptionnels de nos utilisateurs. Merci à toute l'équipe !"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-primary/50 rounded-3xl p-8 border border-white/10 h-full">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://placehold.co/60x60/22c55e/ffffff?text=SB" alt="Sarah Bernard" class="w-14 h-14 rounded-full mr-4">
+                                    <div>
+                                        <h4 class="font-bold">Sarah Bernard</h4>
+                                        <p class="text-gray-400 text-sm">COO, GreenTech Solutions</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-4">
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star text-gold"></i>
+                                    <i class="fa fa-star-half-stroke text-gold"></i>
+                                </div>
+                                <p class="text-gray-300 leading-relaxed">
+                                    "Un partenaire de confiance pour tous nos projets digitaux. Leur expertise technique 
+                                    et leur sens du design font la différence."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-8 space-x-4">
+                    <button id="prev-btn" class="w-12 h-12 rounded-full bg-white/10 hover:bg-accent transition-colors flex items-center justify-center">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <button id="next-btn" class="w-12 h-12 rounded-full bg-white/10 hover:bg-accent transition-colors flex items-center justify-center">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            let currentSlide = 0;
+            const track = document.getElementById('testimonials-track');
+            const totalSlides = 4;
+            function getSlideWidth() {
+                if (window.innerWidth >= 1024) return 33.333;
+                if (window.innerWidth >= 768) return 50;
+                return 100;
+            }
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentSlide * getSlideWidth()}%)`;
+            }
+            document.getElementById('next-btn').addEventListener('click', function() {
+                const maxSlide = window.innerWidth >= 1024 ? 1 : window.innerWidth >= 768 ? 2 : 3;
+                currentSlide = (currentSlide + 1) > maxSlide ? 0 : currentSlide + 1;
+                updateSlider();
+            });
+            document.getElementById('prev-btn').addEventListener('click', function() {
+                const maxSlide = window.innerWidth >= 1024 ? 1 : window.innerWidth >= 768 ? 2 : 3;
+                currentSlide = (currentSlide - 1) < 0 ? maxSlide : currentSlide - 1;
+                updateSlider();
+            });
+            window.addEventListener('resize', updateSlider);
+        </script>
+    </section>
+
+    <section class="py-16 bg-primary">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-gray-400">Ils nous font confiance</span>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-60">
+                <div class="text-3xl font-bold text-gray-400 hover:text-white transition-colors cursor-pointer">
+                    <i class="fa-brands fa-google mr-2"></i>Google
+                </div>
+                <div class="text-3xl font-bold text-gray-400 hover:text-white transition-colors cursor-pointer">
+                    <i class="fa-brands fa-apple mr-2"></i>Apple
+                </div>
+                <div class="text-3xl font-bold text-gray-400 hover:text-white transition-colors cursor-pointer">
+                    <i class="fa-brands fa-microsoft mr-2"></i>Microsoft
+                </div>
+                <div class="text-3xl font-bold text-gray-400 hover:text-white transition-colors cursor-pointer">
+                    <i class="fa-brands fa-spotify mr-2"></i>Spotify
+                </div>
+                <div class="text-3xl font-bold text-gray-400 hover:text-white transition-colors cursor-pointer">
+                    <i class="fa-brands fa-airbnb mr-2"></i>Airbnb
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-semibold tracking-wider uppercase">Tarifs</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                    Des Offres Adaptées à Vos Besoins
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-primary/50 rounded-3xl p-8 border border-white/10 hover:border-accent/50 transition-all duration-300">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                        <p class="text-gray-400 mb-6">Idéal pour démarrer</p>
+                        <div class="text-5xl font-bold mb-2">
+                            <span class="text-2xl">€</span>990
+                        </div>
+                        <p class="text-gray-400 mb-8">projet unique</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            Site vitrine 5 pages
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            Design responsive
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            Optimisation SEO basique
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            Formulaire de contact
+                        </li>
+                        <li class="flex items-center text-gray-500">
+                            <i class="fa fa-xmark mr-3"></i>
+                            Support prioritaire
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center py-4 border-2 border-accent text-accent rounded-full hover:bg-accent hover:text-white transition-all duration-300">
+                        Choisir Starter
+                    </a>
+                </div>
+                <div class="bg-gradient-to-b from-accent/20 to-primary/50 rounded-3xl p-8 border-2 border-accent relative transform scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="px-4 py-1 bg-accent rounded-full text-sm font-semibold">Populaire</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <p class="text-gray-400 mb-6">Pour les entreprises ambitieuses</p>
+                        <div class="text-5xl font-bold mb-2 text-accent">
+                            <span class="text-2xl">€</span>2,990
+                        </div>
+                        <p class="text-gray-400 mb-8">projet unique</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            Site jusqu'à 15 pages
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            Design personnalisé
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            SEO avancé
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            CMS intégré
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-accent mr-3"></i>
+                            Support 6 mois
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center py-4 bg-accent text-white rounded-full hover:bg-purple-500 transition-all duration-300">
+                        Choisir Professional
+                    </a>
+                </div>
+                <div class="bg-primary/50 rounded-3xl p-8 border border-white/10 hover:border-gold/50 transition-all duration-300">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                        <p class="text-gray-400 mb-6">Solutions sur mesure</p>
+                        <div class="text-5xl font-bold mb-2 text-gold">
+                            Sur Devis
+                        </div>
+                        <p class="text-gray-400 mb-8">personnalisé</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-gold mr-3"></i>
+                            Pages illimitées
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-gold mr-3"></i>
+                            Application web/mobile
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-gold mr-3"></i>
+                            E-commerce complet
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-gold mr-3"></i>
+                            Intégrations API
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-gold mr-3"></i>
+                            Support prioritaire 24/7
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center py-4 border-2 border-gold text-gold rounded-full hover:bg-gold hover:text-primary transition-all duration-300">
+                        Nous Contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-primary relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <span class="text-accent font-semibold tracking-wider uppercase">Contact</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                        Donnons Vie à Vos Idées
+                    </h2>
+                    <p class="text-gray-300 text-lg mb-8">
+                        Prêt à transformer votre présence digitale ? Contactez-nous pour discuter de votre projet 
+                        et découvrir comment nous pouvons vous aider à atteindre vos objectifs.
+                    </p>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-accent/20 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fa fa-envelope text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Email</p>
+                                <a href="mailto:contact@elegance.fr" class="text-lg hover:text-accent transition-colors">contact@elegance.fr</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-gold/20 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fa fa-phone text-gold text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Téléphone</p>
+                                <a href="tel:+33123456789" class="text-lg hover:text-gold transition-colors">+33 1 23 45 67 89</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fa fa-location-dot text-purple-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Adresse</p>
+                                <p class="text-lg">42 Avenue des Champs-Élysées, Paris</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fa-brands fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fa-brands fa-dribbble text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-secondary/50 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Prénom</label>
+                                <input type="text" class="w-full px-4 py-3 bg-primary/50 border border-white/10 rounded-xl focus:border-accent focus:outline-none transition-colors" placeholder="Jean">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Nom</label>
+                                <input type="text" class="w-full px-4 py-3 bg-primary/50 border border-white/10 rounded-xl focus:border-accent focus:outline-none transition-colors" placeholder="Dupont">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-primary/50 border border-white/10 rounded-xl focus:border-accent focus:outline-none transition-colors" placeholder="jean@exemple.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Type de projet</label>
+                            <select class="w-full px-4 py-3 bg-primary/50 border border-white/10 rounded-xl focus:border-accent focus:outline-none transition-colors">
+                                <option value="">Sélectionnez une option</option>
+                                <option value="website">Site Web</option>
+                                <option value="app">Application Mobile</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="branding">Branding</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Budget estimé</label>
+                            <select class="w-full px-4 py-3 bg-primary/50 border border-white/10 rounded-xl focus:border-accent focus:outline-none transition-colors">
+                                <option value="">Sélectionnez une fourchette</option>
+                                <option value="small">&lt; 2 000€</option>
+                                <option value="medium">2 000€ - 5 000€</option>
+                                <option value="large">5 000€ - 15 000€</option>
+                                <option value="enterprise">&gt; 15 000€</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-primary/50 border border-white/10 rounded-xl focus:border-accent focus:outline-none transition-colors resize-none" placeholder="Décrivez votre projet..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-accent to-purple-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-accent/40 transition-all duration-300 transform hover:scale-[1.02]">
+                            Envoyer le Message
+                            <i class="fa fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    <script>
+                        document.getElementById('contact-form').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            const btn = this.querySelector('button[type="submit"]');
+                            btn.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i>Envoi en cours...';
+                            setTimeout(() => {
+                                btn.innerHTML = '<i class="fa fa-check mr-2"></i>Message envoyé !';
+                                btn.classList.remove('from-accent', 'to-purple-600');
+                                btn.classList.add('bg-green-500');
+                                setTimeout(() => {
+                                    btn.innerHTML = 'Envoyer le Message <i class="fa fa-paper-plane ml-2"></i>';
+                                    btn.classList.add('from-accent', 'to-purple-600');
+                                    btn.classList.remove('bg-green-500');
+                                    this.reset();
+                                }, 2000);
+                            }, 1500);
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-r from-accent via-purple-600 to-gold">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+                Prêt à Créer Quelque Chose d'Extraordinaire ?
+            </h2>
+            <p class="text-white/80 text-lg mb-8">
+                Rejoignez les centaines d'entreprises qui nous font confiance pour leurs projets digitaux.
+            </p>
+            <a href="#contact" class="inline-flex items-center px-8 py-4 bg-white text-primary rounded-full font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                Commencer Maintenant
+                <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-secondary py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="font-display text-2xl font-bold bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+                        Élégance
+                    </a>
+                    <p class="text-gray-400 mt-4 mb-6">
+                        Créateurs d'expériences digitales uniques depuis 2010. Transformons ensemble vos idées en réalité.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-dribbble text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Design UI/UX</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Développement Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Applications Mobiles</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">SEO &amp; Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Branding</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Entreprise</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">À Propos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Notre Équipe</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Carrières</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Recevez nos dernières actualités et conseils en design.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="flex-1 px-4 py-3 bg-primary/50 border border-white/10 rounded-l-xl focus:border-accent focus:outline-none">
+                        <button type="submit" class="px-4 py-3 bg-accent hover:bg-purple-600 rounded-r-xl transition-colors">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Élégance Digitale. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Mentions Légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Politique de Confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-top" class="fixed bottom-8 right-8 w-12 h-12 bg-accent rounded-full shadow-lg shadow-accent/40 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-purple-600 z-50">
+        <i class="fa fa-chevron-up"></i>
+        <script>
+            const scrollBtn = document.getElementById('scroll-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 500) {
+                    scrollBtn.classList.remove('opacity-0', 'invisible');
+                    scrollBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    scrollBtn.classList.add('opacity-0', 'invisible');
+                    scrollBtn.classList.remove('opacity-100', 'visible');
+                }
+            });
+            scrollBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        </script>
+    </button>
+
+    <div class="fixed inset-0 pointer-events-none z-40 overflow-hidden">
+        <div id="cursor-glow" class="absolute w-64 h-64 bg-accent/10 rounded-full blur-3xl transition-all duration-300 ease-out" style="transform: translate(-50%, -50%);"></div>
+        <script>
+            const cursorGlow = document.getElementById('cursor-glow');
+            document.addEventListener('mousemove', function(e) {
+                cursorGlow.style.left = e.clientX + 'px';
+                cursorGlow.style.top = e.clientY + 'px';
+            });
+        </script>
+    </div>
+</body>
+</html>
